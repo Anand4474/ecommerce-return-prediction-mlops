@@ -1,0 +1,1 @@
+Follow the complete Google Colab instructions in README.md, section 3. The supplied CSV is already in data/ecommerce_returns.csv.
