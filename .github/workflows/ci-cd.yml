@@ -1,13 +1,10 @@
-New-Item -ItemType Directory -Force .github\workflows
-
-@'
 name: ML CI-CD
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   pull_request:
-    branches: ["main"]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -67,4 +64,3 @@ jobs:
           tags: |
             ${{ steps.image.outputs.name }}:latest
             ${{ steps.image.outputs.name }}:${{ github.sha }}
-'@ | Set-Content -Encoding utf8 .github\workflows\ci-cd.yml
